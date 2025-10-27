@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Iran SMP — صفحه اصلی</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">
+      <img src="logo.png" alt="Iran SMP logo" class="logo">
+    </div>
+    <nav class="nav">
+      <a href="index.html">خانه</a>
+      <a href="how-to-join.html">آموزش ورود</a>
+      <a href="shop.html">فروشگاه</a>
+      <a href="contact.html">تماس</a>
+    </nav>
+    <button class="btn-join" id="copyIpBtn">Join: iransmp.linkpc.net</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-left">
+        <h1>خوش آمدید به <span>Iran SMP</span></h1>
+        <p>سرور رسمی SMP فارسی؛ ساخت، کاوش، بقا و رقابت با دوستان — تجربه‌ای روان و امن.</p>
+        <div class="hero-actions">
+          <button class="btn" id="copyIpBtn2"><span>کپی آی‌پی</span></button>
+          <a class="btn ghost" href="how-to-join.html"><span>آموزش ورود</span></a>
+        </div>
+
+        <ul class="features">
+          <li>✅ پلیر آنلاین واقعی</li>
+          <li>✅ مینی‌گیم‌ها: BedWars، Skyblock، Survival</li>
+          <li>✅ فروشگاه داخل سایت و رنک‌های ویژه</li>
+        </ul>
+      </div>
+      <div class="hero-right">
+        <div class="card server-card">
+          <h3>آی‌پی سرور</h3>
+          <p class="ip">iransmp.linkpc.net</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="info container">
+    <h2>ویژگی‌های برجسته</h2>
+    <div class="grid">
+      <article><h3>امن و پایدار</h3><p>بکاپ روزانه و ضدتقلب برای بازی بدون لگ.</p></article>
+      <article><h3>اقتصاد و فروشگاه</h3><p>سیستم اقتصادی کامل و خرید آیتم‌ها و رنک‌ها.</p></article>
+      <article><h3>جامعه فعال</h3><p>رویدادهای هفتگی و دیسکورد فعال.</p></article>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <h2>آماده‌ای؟ به جمع ما بپیوند!</h2>
+      <p>فقط آی‌پی را کپی کن و وارد ماینکرفت شو.</p>
+      <button class="btn big" id="copyIpBtn3"><span>کپی آی‌پی: iransmp.linkpc.net</span></button>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-flex">
+      <div>© 2025 Iran SMP</div>
+      <div>لینک دیسکورد • قوانین • پشتیبانی</div>
+    </div>
+  </footer>
+</main>
+
+<div id="toast" class="toast">آی‌پی کپی شد!</div>
+
+<script>
+document.querySelectorAll('#copyIpBtn,#copyIpBtn2,#copyIpBtn3').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    navigator.clipboard.writeText('iransmp.linkpc.net');
+    let toast=document.getElementById('toast');
+    toast.style.opacity='1';
+    setTimeout(()=>toast.style.opacity='0',2000);
+  });
+});
+</script>
+</body>
+</html>
