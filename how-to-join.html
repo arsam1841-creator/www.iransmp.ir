@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>راهنمای ورود — Iran SMP</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style-join.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <img src="logo.png" alt="Iran SMP Logo" class="logo">
+    </div>
+    <nav class="nav">
+      <a href="index.html"><span>خانه</span></a>
+      <a href="how-to-join.html"><span>آموزش ورود</span></a>
+      <a href="shop.html"><span>فروشگاه</span></a>
+      <a href="contact.html"><span>تماس</span></a>
+    </nav>
+  </div>
+</header>
+
+<div class="background-overlay"></div>
+
+<canvas id="particle-canvas"></canvas>
+
+<div class="container">
+
+  <div class="guide-card">
+    <h2>مرحله 1: نصب Minecraft</h2>
+    <p>ابتدا Minecraft را روی سیستم خود نصب کنید.</p>
+  </div>
+
+  <div class="guide-card">
+    <h2>مرحله 2: ورود به اکانت</h2>
+    <p>وارد اکانت Minecraft خود شوید و به بخش Multiplayer بروید.</p>
+  </div>
+
+  <div class="guide-card">
+    <h2>مرحله 3: افزودن سرور</h2>
+    <p>
+      آدرس سرور: 
+      <span id="server-link" class="copy-link" onclick="copyServer()">iransmp.linkpc.net</span>
+      را در بخش Multiplayer اضافه کنید.
+      <span id="copy-msg" class="copy-msg">کپی شد!</span>
+    </p>
+  </div>
+
+</div>
+
+<script src="script-particles.js"></script>
+<script>
+function copyServer() {
+  const server = document.getElementById("server-link").innerText;
+  navigator.clipboard.writeText(server).then(() => {
+    const msg = document.getElementById("copy-msg");
+    msg.classList.add("show");
+    setTimeout(() => msg.classList.remove("show"), 1500);
+  }).catch(err => console.error("مشکل در کپی کردن آدرس:", err));
+}
+</script>
+
+</body>
+</html>

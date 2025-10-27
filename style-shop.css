@@ -1,0 +1,164 @@
+:root {
+  --bg: #0b0f14;
+  --card: #0f1720;
+  --glass: rgba(0,0,0,0.6);
+  --accent: #ffd400;
+}
+
+body {
+  margin: 0;
+  font-family: "Vazirmatn", sans-serif;
+  background: url('sh.png') center/cover no-repeat;
+  color: #e9eef6;
+  direction: rtl;
+  display: flex;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 220px;
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.5);
+}
+
+.sidebar .logo {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.nav a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.1);
+  transition: 0.5s;
+}
+
+.nav a:hover::before {
+  left: 0;
+}
+
+/* MAIN SHOP */
+.shop-page {
+  flex: 1;
+  padding: 40px;
+}
+
+.shop-title { font-size: 36px; margin-bottom: 10px; }
+.shop-desc { color: white; margin-bottom: 30px; }
+
+.discount-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.discount-input input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  flex: 1;
+}
+
+.discount-input button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/* RANK CARDS */
+.ranks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 20px;
+}
+
+.rank-card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.rank-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+}
+
+.rank-card h2 {
+  font-size: 28px;
+  margin-top: 0;
+  background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #8b00ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow 3s linear infinite;
+}
+
+.rank-card .price {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.rank-card .btn {
+  padding: 12px 0;
+  border-radius: 8px;
+  width: 100%;
+  font-weight: 700;
+  border: none;
+  background: #111;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.rank-card .btn:hover {
+  color: #23a55a;
+}
+
+@keyframes rainbow {
+  0% {background-position:0%;}
+  100% {background-position:200%;}
+}
+@keyframes rgbGlow{
+  0%{box-shadow:0 0 15px red;}
+  14%{box-shadow:0 0 15px orange;}
+  28%{box-shadow:0 0 15px yellow;}
+  42%{box-shadow:0 0 15px green;}
+  57%{box-shadow:0 0 15px cyan;}
+  71%{box-shadow:0 0 15px blue;}
+  85%{box-shadow:0 0 15px magenta;}
+  100%{box-shadow:0 0 15px red;}
+}
